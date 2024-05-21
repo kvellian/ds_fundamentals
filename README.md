@@ -18,10 +18,15 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 This project focuses on the fundamentals of data science to explore machine learning algorithms, with R, using this Penguin Sizes data.
 
 Part 1. Data Exploration
+
 Part 2. Data Cleaning
+
 Part 3. Data Preprocessing
+
 Part 4. Clustering
+
 Part 5. Classification 
+
 Part 6. Evaluation
 
 
