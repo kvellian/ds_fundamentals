@@ -113,8 +113,4 @@ Let's use kmeans to determine the best number for K before clustering. Using the
 - Using the Within Sum of Squares method, K = 4 represents the last non flat slope, or some argue that we should use K = 5 because that is the last point before the slope goes flat.
 - Using the Silhouette method, K = 2.
 
-- 
-
-
-
-<img src="assets/img/count_bar_plot.png" alt="count bar plot">
+<img src="assets/img/predictors_clustering_wss.png" alt="predictors_clustering_wss">
