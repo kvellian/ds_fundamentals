@@ -18,7 +18,7 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 This project focuses on the fundamentals of data science to explore machine learning algorithms, with R, using this Penguin Sizes data.
 
 
-Our target variable will be penguin gender.
+**Our target variable will be penguin gender.**
 
 
 - Part 1. Data Exploration
