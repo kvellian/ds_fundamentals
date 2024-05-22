@@ -45,7 +45,7 @@ This project focuses on the fundamentals of data science to explore machine lear
 | Flipper Length (mm)   | 200.90 | 172.00 | 231.00 |
 | Body Mass (g)         | 4202   | 2700   | 6300   |
 
-After exploring the data further, there appears to be 2 NA's in each of the columns:
+After exploring the data further, there appear to be 2 NAs in each of the columns:
 culmen_length_mm, culmen_depth_mm, flipper_length_mm, body_mass_g. 
 
 
@@ -71,7 +71,7 @@ After calculating the proportion of missing data per column to see the significa
 The sex column has the most significant impact on the data, with 3.20% contributing to missing NAs. As opposed to 0.58% for culmen_length_mm, culmen_depth_mm, flipper_length_mm, and body_mass_g.
 
 
-Considering, 3.20% is relatively low, I will drop the NAs, since its removal should not have too large of an effect on predictability. After dropping the NAs, 11 rows have been removed, and the dataset now contains 333 rows now.
+Considering, 3.20% is relatively low, I will drop the NAs since its removal should not have too large of an effect on predictability. After dropping the NAs, 11 rows have been removed, and the dataset now contains 333 rows.
 
 
 ## Part 3. Data Preprocessing
@@ -113,6 +113,27 @@ Let's use kmeans to determine the best number for K before clustering. Using the
 - Using the Within Sum of Squares method, K = 4 represents the last non flat slope, or some argue that we should use K = 5 because that is the last point before the slope goes flat.
 - Using the Silhouette method, K = 2.
 
+
+
+
 <img src="assets/img/predictors_clustering_wss.png" alt="predictors_clustering_wss">
 <img src="assets/img/predictors_clustering_silhouette.png" alt="predictors_clustering_silhouette">
+
+
+Either option can be justified but since the K = 4 is the second best option for the silhouette score it is a promising option for both. Using K = 4 as suggested by the plots we can fit our model using the kmeans function.
+
+Below are the plots created with K = 4
+
+
+<img src="assets/img/fit_clustering.png" alt="fit_clustering">
+<img src="assets/img/pca_clustering.png" alt="pca_clustering">
+<img src="assets/img/pca_clustering_colored.png" alt="pca_clustering_colored">
+
+
+
+
+
+
+
+
 
