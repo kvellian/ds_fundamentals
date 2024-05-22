@@ -17,6 +17,10 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 
 This project focuses on the fundamentals of data science to explore machine learning algorithms, with R, using this Penguin Sizes data.
 
+
+Our target variable will be penguin gender.
+
+
 - Part 1. Data Exploration
 - Part 2. Data Cleaning
 - Part 3. Data Preprocessing
@@ -84,11 +88,6 @@ In this step, let's create 2 new columns:
 
 Next, I'll convert the categorical variables into factors. I'll also prepare a subset of the penguin_size data without the class labels to perform clustering. Afterward, I'll preprocess the data using the center-scaled method.
 
-      # Creating subset of penguin_size data to perform clustering
-      # Removing class labels
-      predictors_clustering <- penguin_size %>% select(-c(species, island, sex))
-
-
 Since, we're going to perform predictions using other classifiers, I'll partition the data after using a 70/30 train-test split and preprocess the data when creating the classifier models.
 
       # Center scale allows us to standardize the data
@@ -112,9 +111,6 @@ Since, we're going to perform predictions using other classifiers, I'll partitio
 Let's use kmeans to determine the best number for K before clustering. Using the plots for the Within Sum of Squares method and the Silhouette method.
 - Using the Within Sum of Squares method, K = 4 represents the last non flat slope, or some argue that we should use K = 5 because that is the last point before the slope goes flat.
 - Using the Silhouette method, K = 2.
-
-
-
 
 <img src="assets/img/predictors_clustering_wss.png" alt="predictors_clustering_wss">
 <img src="assets/img/predictors_clustering_silhouette.png" alt="predictors_clustering_silhouette">
