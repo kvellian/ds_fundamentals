@@ -114,5 +114,5 @@ Let's use kmeans to determine the best number for K before clustering. Using the
 - Using the Silhouette method, K = 2.
 
 <img src="assets/img/predictors_clustering_wss.png" alt="predictors_clustering_wss">
-<img src="assets/img/predictors_clustering_silhoutte.png" alt="predictors_clustering_wss">
+<img src="assets/img/predictors_clustering_silhoutte.png" alt="predictors_clustering_silhoutte">
 
