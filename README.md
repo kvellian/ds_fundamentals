@@ -15,7 +15,7 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 
 ## Purpose
 
-This project focuses on the fundamentals of data science to explore machine learning algorithms, with R, using this Penguin Sizes data.
+This project explores machine learning algorithms to predict penguin gender, with R.
 
 
 **Our target variable will be penguin gender.**
@@ -84,7 +84,7 @@ In this step, let's create 2 new columns:
 - culmen_size_mm2: This will be the value of (culmen length x culmen depth), to explore the data more and see if adding this variable can help with prediction accuracy.
 
   
-- body_mass_lbs: Converting the body_mass_g column from grams to pounds with this conversion formula: body_mass_lbs = body_mass_g / 453.59237
+- body_mass_lbs: Converting the body_mass_g column from grams to pounds (body_mass_lbs = body_mass_g / 453.59237).
 
 Next, I'll convert the categorical variables into factors. I'll also prepare a subset of the penguin_size data without the class labels to perform clustering. Afterward, I'll preprocess the data using the center-scaled method.
 
