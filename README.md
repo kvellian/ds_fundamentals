@@ -42,6 +42,7 @@ This project explores machine learning algorithms to predict penguin gender, wit
 | Sex         | Penguin gender                                       | MALE, FEMALE, NA, “.”              |
 
 **Numerical Variables**
+
 | Measurement           | Mean   | Min    | Max    |
 |-----------------------|--------|--------|--------|
 | Culmen Length (mm)    | 43.92  | 32.10  | 59.60  |
@@ -120,14 +121,33 @@ Either option can be justified but since the K = 4 is the second best option for
 
 Below are the plots created with K = 4
 
-
+- Cluster plot
 <img src="assets/img/fit_clustering.png" alt="fit_clustering">
+
+- PCA Projection Colored by Penguin Gender
 <img src="assets/img/pca_clustering.png" alt="pca_clustering">
+
+- PCA Projection Colored by Cluster
 <img src="assets/img/pca_clustering_colored.png" alt="pca_clustering_colored">
 
+## Part 4. Clustering
 
+Now that we've partitioned that data in part 3. Data Preprocessing, let's preprocess the data as we create the classifiers.
 
+Using SVM, and grid search to tune for C: The final value used for the model was C = 0.1. 
+- Accuracy was 0.9777766.
 
+Using KNN, and tuning the choice of k plus the type of distance function: The final values used for the model were kmax = 7, distance = 2 and kernel = cos.
+- Accuracy was 0.9228261.
+
+Using Decision Tree, and basic rpart method, the final value used for the model was cp = 0.01724138.
+- Accuracy was 0.8425231.
+
+<img src="assets/img/decision_tree_plot.png" alt="decision_tree_plot">
+
+When comparing the classifiers to predict the penguin's sex, SVM performed the best, with an accuracy of 0.9777766. KNN was a close second with an accuracy of 0.9228261.
+
+- For part 5. Evaluation, let's proceed with the best performing classifier, SVM.
 
 
 
