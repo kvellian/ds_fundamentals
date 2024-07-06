@@ -135,6 +135,16 @@ Now that we've partitioned that data in part 3. Data Preprocessing, let's prepro
 Using SVM, and grid search to tune for C: The final value used for the model was C = 0.1. 
 - Accuracy was 0.9777766.
 
+
+````
+svm_grid
+
+````
+
+
+
+
+
 Using KNN, and tuning the choice of k plus the type of distance function: The final values used for the model were kmax = 7, distance = 2 and kernel = cos.
 - Accuracy was 0.9228261.
 
