@@ -169,8 +169,95 @@ The final value used for the model was C = 0.1.
 Using KNN, and tuning the choice of k plus the type of distance function: The final values used for the model were kmax = 7, distance = 2 and kernel = cos.
 - Accuracy was 0.9228261.
 
+````
+kknn_fit
+````
+````
+k-Nearest Neighbors 
+
+234 samples
+  8 predictor
+  2 classes: 'FEMALE', 'MALE' 
+
+Pre-processing: centered (10), scaled (10) 
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 211, 210, 211, 211, 211, 210, ... 
+Resampling results across tuning parameters:
+
+  kmax  kernel       distance  Accuracy   Kappa    
+  1     rectangular  1         0.8755435  0.7508191
+  1     rectangular  2         0.8759058  0.7515104
+  1     rectangular  3         0.8759058  0.7517089
+  1     cos          1         0.8755435  0.7508191
+  1     cos          2         0.8759058  0.7515104
+  1     cos          3         0.8759058  0.7517089
+  2     rectangular  1         0.8755435  0.7508191
+  2     rectangular  2         0.8759058  0.7515104
+  2     rectangular  3         0.8759058  0.7517089
+  2     cos          1         0.8755435  0.7508191
+  2     cos          2         0.8759058  0.7515104
+  2     cos          3         0.8759058  0.7517089
+  3     rectangular  1         0.9143116  0.8284392
+  3     rectangular  2         0.9143116  0.8281082
+  3     rectangular  3         0.8967391  0.7927771
+  3     cos          1         0.8969203  0.7935885
+  3     cos          2         0.8885870  0.7766558
+  3     cos          3         0.9012681  0.8020682
+  4     rectangular  1         0.9143116  0.8284392
+  4     rectangular  2         0.9143116  0.8281082
+  4     rectangular  3         0.8967391  0.7927771
+  4     cos          1         0.9012681  0.8023998
+  4     cos          2         0.9014493  0.8024129
+  4     cos          3         0.9097826  0.8189458
+  5     rectangular  1         0.9057971  0.8113609
+  5     rectangular  2         0.9144928  0.8285204
+  5     rectangular  3         0.8925725  0.7843147
+  5     cos          1         0.9097826  0.8196108
+  5     cos          2         0.8972826  0.7940796
+  5     cos          3         0.8971014  0.7936014
+  6     rectangular  1         0.9057971  0.8111629
+  6     rectangular  2         0.9144928  0.8285204
+  6     rectangular  3         0.9012681  0.8016041
+  6     cos          1         0.9097826  0.8196108
+  6     cos          2         0.9057971  0.8110296
+  6     cos          3         0.8971014  0.7934671
+  7     rectangular  1         0.9099638  0.8194962
+  7     rectangular  2         0.9184783  0.8363105
+  7     rectangular  3         0.9014493  0.8021503
+  7     cos          1         0.9141304  0.8282236
+  7     cos          2         0.9228261  0.8452535
+  7     cos          3         0.9141304  0.8274952
+
+Accuracy was used to select the optimal model using the largest value.
+The final values used for the model were kmax = 7, distance = 2 and kernel = cos.
+````
+
 Using Decision Tree, and basic rpart method, the final value used for the model was cp = 0.01724138.
 - Accuracy was 0.8425231.
+
+````
+decision_tree
+````
+````
+CART 
+
+234 samples
+  8 predictor
+  2 classes: 'FEMALE', 'MALE' 
+
+Pre-processing: centered (10), scaled (10) 
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 212, 210, 210, 211, 211, 210, ... 
+Resampling results across tuning parameters:
+
+  cp          Accuracy   Kappa    
+  0.01724138  0.8425231  0.6842408
+  0.10344828  0.7948452  0.5898477
+  0.63793103  0.6629611  0.3172756
+
+Accuracy was used to select the optimal model using the largest value.
+The final value used for the model was cp = 0.01724138.
+````
 
 <img src="assets/img/decision_tree_plot.png" alt="decision_tree_plot">
 
@@ -178,6 +265,46 @@ When comparing the classifiers to predict the penguin's sex, SVM performed the b
 
 - For part 5. Evaluation, let's proceed with the best performing classifier, SVM.
 
+## Part 5. Evaluation
+
+After producing the 2 x 2 confusion matrix for the FEMALE and MALE classes, here is the result:
+
+| Prediction | FEMALE | MALE     |
+|----------|----------|----------|
+| FEMALE   | 45       |  9       |
+|    MALE     | 4        | 41       |
+
+
+Since the confusion matrix object only shows statistics for 'Positive' Class : FEMALE, I created a confusion matrix for 'Positive' Class : MALE, combined their class statistics in a dataset to easily pull calculations.
+
+
+When calculating precision manually, here is the result:
+
+| Class   | Precision | 
+|----------|----------|
+| FEMALE    | 0.8333333   |
+| MALE    | 0.9111111   |
+
+
+When calculating recall manually, here is the result:
+
+| Class   | Recall | 
+|----------|----------|
+| FEMALE    | 0.9183673   |
+| MALE    | 0.8200000   |
+
+
+When analyzing the statistics above, MALE appears to have a higher precision and FEMALE appears to have a higher recall.
+
+Precision measures the accuracy of forming positive predictions. Recall measures the model's ability to find true positives.
+
+In summary, high precision is important when failing to identify a negative prediction as a false positive is more costly than missing actual false negatives (positive predictions). High recall is important when failing to identify a positive prediction is more costly than incorrectly identifying a negative case.
+
+
+The ROC curve will plot Recall or Sensitivity (True Positive Rate) against Specificity (False Positive Rate). In this result, the area under the ROC curve (AUC) has a high value with AUC: 0.951, indicating good test performance and classification abilities. The model can identify the differences positive and negative classes effectively. 
+
+
+<img src="assets/img/roc_obj.png" alt="roc_obj">
 
 
 
