@@ -138,12 +138,33 @@ Using SVM, and grid search to tune for C: The final value used for the model was
 
 ````
 svm_grid
-
 ````
+````
+Support Vector Machines with Linear Kernel 
 
+234 samples
+  8 predictor
+  2 classes: 'FEMALE', 'MALE' 
 
+Pre-processing: centered (10), scaled (10) 
+Resampling: Cross-Validated (10 fold, repeated 25 times) 
+Summary of sample sizes: 211, 210, 211, 211, 210, 211, ... 
+Resampling results across tuning parameters:
 
+  C      ROC        Sens       Spec     
+  1e-05  0.2668214  0.1937576  0.9116364
+  1e-04  0.8836749  0.1933939  0.9112727
+  1e-03  0.8836446  0.8833030  0.6864545
+  1e-02  0.9632826  0.8945152  0.9023333
+  1e-01  0.9777766  0.8927879  0.9305455
+  1e+00  0.9764396  0.9048182  0.9250606
+  1e+01  0.9749635  0.9105152  0.9171212
+  1e+02  0.9741568  0.9092121  0.9110909
+  1e+03  0.9733584  0.9055758  0.9047576
 
+ROC was used to select the optimal model using the largest value.
+The final value used for the model was C = 0.1.
+````
 
 Using KNN, and tuning the choice of k plus the type of distance function: The final values used for the model were kmax = 7, distance = 2 and kernel = cos.
 - Accuracy was 0.9228261.
