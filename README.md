@@ -1,5 +1,3 @@
-<img src="assets/img/headshot_circle_cropped.png" alt="Data Science Portfolio - Ken Vellian" width="200" height="200">
-
 ## Dataset
 
 This dataset, penguins_size.csv, was sourced from Kaggle.
