@@ -13,7 +13,7 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 
 ## Purpose
 
-This project explores machine learning algorithms to predict penguin gender, with R.
+This project explores the accuracy of different machine-learning algorithms to predict penguin gender.
 
 
 **Our target variable will be penguin gender.**
