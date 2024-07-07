@@ -263,7 +263,7 @@ The final value used for the model was cp = 0.01724138.
 
 When comparing the classifiers to predict the penguin's sex, SVM performed the best, with an accuracy of 0.9777766. KNN was a close second with an accuracy of 0.9228261.
 
-- For part 5. Evaluation, let's proceed with the best performing classifier, SVM.
+- For part 6. Evaluation, let's proceed with the best performing classifier, SVM.
 
 ## Part 6. Evaluation
 
