@@ -307,5 +307,11 @@ The ROC curve will plot Recall or Sensitivity (True Positive Rate) against Speci
 <img src="assets/img/roc_obj.png" alt="roc_obj">
 
 
+After performing analysis to predict penguin gender using the three classifiers above, SVM performed the best with an accuracy of 0.9777766 with tuning C = 0.1. Adjusting the SVM classifier’s train control and train method to plot an ROC curve initially posed a challenge but after figuring out it is possible really opened my mind to understand just how vast and powerful of a tool R can be to perform machine learning models.
 
 
+Before performing the analysis, I was predicting that Decision Tree would work the best since we are predicting 2 different classes, MALE and FEMALE. However, it produced the worst result with an accuracy of 0.8425231. One major takeaway from testing the Decision Tree classifier is that it used the variable I created called culmen_size_mm2 when classifying between MALE and FEMALE genders. So, my original assumption about the classifier using this new variable to help with predictions turned out to be true.
+- culmen_size_mm2 = culmen_length_mm x culmen_ depth _mm
+
+
+When cleaning the data to identify unique values for each categorical variable, I was surprised to find the anomaly entry of “.” In the sex column. Which turned out to be a human error. If the data was not cleaned prior to running the classifiers, this could have been detrimental to the performance of the classifiers. After reflecting on this scenario, it really is true that data cleaning can take 60-80% of the testing process and it is a step not to be ignored.
