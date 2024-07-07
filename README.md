@@ -128,7 +128,7 @@ Below are the plots created with K = 4
 - PCA Projection Colored by Cluster
 <img src="assets/img/pca_clustering_colored.png" alt="pca_clustering_colored">
 
-## Part 4. Clustering
+## Part 5. Classification
 
 Now that we've partitioned that data in part 3. Data Preprocessing, let's preprocess the data as we create the classifiers.
 
@@ -265,7 +265,7 @@ When comparing the classifiers to predict the penguin's sex, SVM performed the b
 
 - For part 5. Evaluation, let's proceed with the best performing classifier, SVM.
 
-## Part 5. Evaluation
+## Part 6. Evaluation
 
 After producing the 2 x 2 confusion matrix for the FEMALE and MALE classes, here is the result:
 
