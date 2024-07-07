@@ -9,7 +9,7 @@ This dataset, penguins_size.csv, was sourced from Kaggle.
 
 ## RMarkdown Code
 
-- [View Data Science Fundamentals Report]()
+- [View Data Science Fundamentals Report](https://kvellian.github.io/ds_fundamentals/assets/path/ds_fundamentals_KV.html)
 
 ## Purpose
 
